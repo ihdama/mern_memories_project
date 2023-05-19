@@ -13,7 +13,7 @@ app.use(cors());
 
 
 app.use('/posts', postRoutes);
-const CONNECTION_URL = "mongodb://localhost:27017";
+const CONNECTION_URL = "mongodb://localhost:27017/test";
 
 const PORT = process.env.PORT || 5000;
 
@@ -21,4 +21,4 @@ mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: tr
 	.then(() => app.listen(PORT, () => console.log(`Server running on port: http://localhost:${PORT}`)))
 	.catch((error) => console.log(error.message));
 
-// mongoose.set("useFindAndModify", false);
+// mongoose.set('useFindAndModify', false);
